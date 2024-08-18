@@ -7,7 +7,8 @@ class MySliverHeaderProfile extends SliverPersistentHeaderDelegate {
   final Widget name;
   final double maxH;
 
-  final profilePicAvatarTween =
+  /// profilePicAvatarMarginTween, titleMarginTween, iconMarginTween for margin
+  final profilePicAvatarMarginTween =
       EdgeInsetsTween(end: const EdgeInsets.only(left: 50.0, top: 53.0));
 
   final titleMarginTween = EdgeInsetsTween(
@@ -17,6 +18,8 @@ class MySliverHeaderProfile extends SliverPersistentHeaderDelegate {
   final iconMarginTween = EdgeInsetsTween(
     begin: const EdgeInsets.only(top: 70, right: 20, bottom: 10),
   );
+
+  /// profilePicAlignTween, titleAlignTween, iconAlignTween for alignment
 
   final profilePicAlignTween =
       AlignmentTween(begin: Alignment.center, end: Alignment.centerLeft);
@@ -34,7 +37,7 @@ class MySliverHeaderProfile extends SliverPersistentHeaderDelegate {
 
     final progress = shrinkOffset > tempVal ? 1.0 : shrinkOffset / tempVal;
 
-    final profilePicMargin = profilePicAvatarTween.lerp(progress);
+    final profilePicMargin = profilePicAvatarMarginTween.lerp(progress);
     final profilePicAlign = profilePicAlignTween.lerp(progress);
 
     final titleMargin = titleMarginTween.lerp(progress);
