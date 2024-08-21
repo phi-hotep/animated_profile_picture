@@ -15,6 +15,6 @@ You can contact me on:
 
 I also write articles about Flutter on medium:
 
-- [LinkedIn](https://medium.com/@huguesarnold)
+- [Medium](https://medium.com/@huguesarnold)
 
 
